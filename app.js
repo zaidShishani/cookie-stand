@@ -1,5 +1,4 @@
 'use strict';
-'use strict';
 
 let container = document.getElementById('locationData');
 let table = document.createElement('table');
@@ -28,6 +27,7 @@ function shopData(shopLocation, min, max, AvgPerHour) {
 }
 
 
+
     shopData.prototype.getRandomCustomer = function () {
         for(let i = 0 ; i < workingHours.length ; i++){
             this.randomCustomersNumPerHouer.push(getRandomMaxAndMin(this.min, this.max))
@@ -41,6 +41,7 @@ function shopData(shopLocation, min, max, AvgPerHour) {
             this.totalOfDailySoldCoockies += this.soldCookiesPerHouer[i]; 
         }
     }
+
 
     
     function tableHeader() {
@@ -59,6 +60,7 @@ function shopData(shopLocation, min, max, AvgPerHour) {
         thEl3.textContent = 'Daily Location Total';
     }   
     tableHeader();
+
 
     
     shopData.prototype.render = function (){

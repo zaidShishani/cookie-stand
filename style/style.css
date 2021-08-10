@@ -1,3 +1,17 @@
 * {
     font-family: Arial, sans-serif;
   }
+
+body header{
+  background-color: lightblue;
+  text-align: center
+}
+main{
+  text-align: center;
+}
+
+
+footer {
+  background-color: lightblue;
+  text-align: center
+}

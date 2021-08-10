@@ -108,7 +108,7 @@ function shopData(shopLocation, min, max, AvgPerHour) {
    
     let seattle = new shopData('Seattle', 23, 65, 6.3);
     let tokyo = new shopData('Tokyo', 3, 24, 1.2);
-    let dobai = new shopData('Dubai', 11, 38, 3.7);
+    let dubai = new shopData('Dubai', 11, 38, 3.7);
     let paris = new shopData('Paris', 20, 38, 2.3);
     let lima = new shopData('Lima', 2, 16, 4.6);
 

@@ -4,22 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
     <title>Salmon Cookies</title>
 </head>
 <body>
     <header>
+        <h1>Sale Data</h1>
         <a href ="index.html">Home</a>
     </header>
 
     <main>
+        <h2>Sales Data by the hour</h2>
+        <form action="" id="myForm">
+        <fieldset>
+            <legend>adding new a new demo location</legend>
+            <label for="locationDemo">Location name</label>
+            <input type="text" name="name" id="locationDemo" />
+            <br /><br />
+            <label for="minimum">Minimum order</label>
+          <input
+            type="number"
+            name="minimum"
+            id="minimum"
+          />
+          <br /><br />
+          <label for="maximum">Maximum order</label>
+          <input
+            type="number"
+            name="maximum"
+            id="maximum"
+          />
+          <br /><br />
+          <label for="average">Average sales</label>
+          <input
+            type="number"
+            name="average"
+            id="average"
+          />
+          <br /><br />
+        <input type="submit" value="Submit" />
+        </fieldset>
+    </form>
     <div id="locationData">
         <!--     
             Table of inforamtion for sales data app.js
 
-        -->
-    </div>
+        -->       
+    </div>    
 
 </main>
+
+
 <footer>
 
     

@@ -57,7 +57,7 @@ function shopData(shopLocation, min, max, AvgPerHour) {
         header.appendChild(thEl3);
         thEl3.textContent = 'Daily Location Total';
     }   
-    tableHeader();
+    
 
     
     shopData.prototype.render = function (){
@@ -79,11 +79,12 @@ function shopData(shopLocation, min, max, AvgPerHour) {
     }
     
 
-    
+    let footerRow;
     function tableFooter (){
         let totalSalesPerLocation = 0;
         let SalesPerLocation = 0;
         let footer = document.createElement('tr');
+        footerRow = footer
         table.appendChild(footer);
         let tdEl1 = document.createElement('td');
         footer.appendChild(tdEl1);
@@ -105,6 +106,26 @@ function shopData(shopLocation, min, max, AvgPerHour) {
         tdEl3.textContent = totalSalesPerLocation;
     }
 
+    function deleteRow() {
+        table.removeChild(footerRow);
+    }
+
+    let myform = document.getElementById('myForm');
+    myform.addEventListener('submit', addDemo);
+    function addDemo(event) {
+        event.preventDefault();
+        let locationDemo = event.target.locationDemo.value;
+        let minimum = event.target.minimum.value;
+        let maximum = event.target.maximum.value;
+        let average = event.target.average.value;       
+        let newDemo = new shopData(locationDemo,minimum,maximum,average)
+        newDemo.getRandomCustomer();
+        newDemo.getSalesPerHour()
+        newDemo.render();
+        deleteRow();
+        tableFooter ();
+    }
+
    
     let seattle = new shopData('Seattle', 23, 65, 6.3);
     let tokyo = new shopData('Tokyo', 3, 24, 1.2);
@@ -112,10 +133,12 @@ function shopData(shopLocation, min, max, AvgPerHour) {
     let paris = new shopData('Paris', 20, 38, 2.3);
     let lima = new shopData('Lima', 2, 16, 4.6);
 
-    
+    tableHeader();
+
     for (let i = 0; i < locationArray.length; i++) {
         locationArray[i].getRandomCustomer();
         locationArray[i].getSalesPerHour();
         locationArray[i].render();
     }
+
     tableFooter();

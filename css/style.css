@@ -8,10 +8,39 @@ body header{
 }
 main{
   text-align: center;
+  margin: auto;
 }
 
+form{
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-radius: 25px;
+  background-color: #943600;
+  padding: 20px;
+  color: white;
+}
+#locationData{
+  display: flex;
+  content: counter;
+  margin-top: 25px;
+  text-align: center;
+  margin-left: 19%;
+}
+
+#locationData th{
+  border: 1px solid white;
+  background-color: black;
+  padding: 10px;
+}
+#locationData td{
+  border: 1px solid white;
+  background-color: black;
+  padding: 10px;
+}
 
 footer {
   background-color: lightblue;
   text-align: center
 }
+
